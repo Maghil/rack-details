@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input to Tab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Input to Tab</h1>
+    </header>
+
+    <main>
+        <aside id="sidebar">
+            <div class="sidebar-container">
+                <div class="toggle-container">
+                    <div id="toggle-header">Rack Details</div>
+                    <div class="toggle-button" onclick="toggleSidebar()">☰</div>
+                </div>
+                <div class="content" id="content">
+                    <div class="rack-details">
+                        <div class="ip">123.34.645.645</div>
+                        <div class="led"></div>
+                    </div>
+                    <div class="rack-details">
+                        <div class="ip">123.34.645.645</div>
+                        <div class="led"></div>
+                    </div>
+                    <div class="rack-details">
+                        <div class="ip">123.34.645.645</div>
+                        <div class="led"></div>
+                    </div>
+                    <div class="rack-details">
+                        <div class="ip">123.34.645.645</div>
+                        <div class="led"></div>
+                    </div>
+                    <div class="rack-details">
+                        <div class="ip">123.34.645.645</div>
+                        <div class="led"></div>
+                    </div>
+                    <div class="rack-details">
+                        <div class="ip">123.34.645.645</div>
+                        <div class="led"></div>
+                    </div>
+                    <div class="rack-details">
+                        <input type="text" id="rack-entry">
+                        <div id="add" onclick="addTab()">+</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="tab-container" id="tabsContainer"></div>
+    </main>
+
+    <footer>
+        &copy; 2023 Your Company
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

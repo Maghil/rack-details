@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIEC - LAB</title>
+    <script type="text/javascript" src="{% static 'js/script.js'%}"></script>
+    <link rel="stylesheet" href="{% static '/css/style.css'%}">
+</head>
+
+<body>
+    <header>
+        <h1>CIEC - LAB</h1>
+    </header>
+
+    <main>
+        <aside id="sidebar">
+            <div class="sidebar-container">
+                <div class="toggle-container">
+                    <div id="toggle-header">Rack Details</div>
+                    <div class="toggle-button" onclick="toggleSidebar()">☰</div>
+                </div>
+                <div class="content" id="content">
+                    {% if rack_list %}
+                        {% for rack in rack_list %}
+                            <div class="rack-details">
+                                <div class="ip">{{ rack.rack_ip }}</div>
+                                <div id="{{rack.rack_ip}}" class="led"></div>
+                            </div>
+                            <script type="text/javascript">
+                                makeHttpRequest("{{ rack.rack_ip }}")
+                             </script>
+                        {% endfor %}
+                    {% else %}
+                        <p>No polls are available.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </aside>
+
+        <div class="tab-container" id="tabsContainer"></div>
+    </main>
+
+    <footer>
+        &copy; 2023 CLiX
+    </footer>
+</body>
+
+</html>
